@@ -1,1 +1,134 @@
-https://github.com/thangtranne2023/w-azure/blob/main/bounty
+-- Key System with Script Chooser using Orion Library for Roblox
+-- Place this LocalScript in StarterPlayerScripts
+
+-- Wait until game and local player are loaded
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+-- Load Orion UI library from official GitHub repo
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))()
+
+-- Create UI Window
+local Window = OrionLib:MakeWindow({
+    Name = "ShiinaMahiruPublicScript (premium)",
+    HidePremium = true,
+    IntroText = "Enter key to run script!",
+    SaveConfig = false,
+})
+
+-- Define the correct key value manually
+local correctKey = "KEY_PREMIUM" -- Change this key as you like
+
+local userKey = ""
+local accessGranted = false
+
+-- Create Unlock Tab (for key input)
+local UnlockTab = Window:MakeTab({
+    Name = "Unlock",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false,
+})
+
+-- Create Scripts Tab (initially disabled, will enable if access granted)
+local ScriptsTab = Window:MakeTab({
+    Name = "Scripts",
+    Icon = "rbxassetid://6026568196",
+    PremiumOnly = false,
+})
+
+-- Custom scripts definitions: only BananaHub loader
+local availableScripts = {
+    ["grow a garden Loader"] = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/Grow-a-Garden/main/Grow_A_Garden.lua"))()
+        OrionLib:MakeNotification({
+            Name = "Grow a garden",
+            Content = "Grow A garden ran",
+            Image = "rbxassetid://4483345998",
+            Time = 5,
+        })
+    end,
+}
+
+-- Key Input variable
+local inputKey = ""
+
+-- Unlock Tab: Add Textbox for key input
+UnlockTab:AddTextbox({
+    Name = "Enter Key",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(text)
+        inputKey = text
+    end,
+})
+
+-- Unlock Tab: Add submit button
+UnlockTab:AddButton({
+    Name = "Submit Key",
+    Callback = function()
+        if inputKey == correctKey then
+            accessGranted = true
+            OrionLib:MakeNotification({
+                Name = "Access Granted",
+                Content = "Correct key! You now have access to scripts.",
+                Image = "rbxassetid://4483345998",
+                Time = 5,
+            })
+        else
+            OrionLib:MakeNotification({
+                Name = "Access Denied",
+                Content = "Incorrect key. Please try again.",
+                Image = "rbxassetid://4483345998",
+                Time = 5,
+            })
+        end
+        -- Clear input key
+        inputKey = ""
+    end,
+})
+
+-- Scripts Tab UI Elements
+local selectedScript = nil
+
+ScriptsTab:AddDropdown({
+    Name = "Select a Script",
+    Default = nil,
+    Options = (function()
+        local keys = {}
+        for k, _ in pairs(availableScripts) do
+            table.insert(keys, k)
+        end
+        return keys
+    end)(),
+    Callback = function(choice)
+        selectedScript = choice
+    end,
+})
+
+ScriptsTab:AddButton({
+    Name = "Run Script",
+    Callback = function()
+        if not accessGranted then
+            OrionLib:MakeNotification({
+                Name = "Access Denied",
+                Content = "Please enter the correct key to unlock scripts!",
+                Image = "rbxassetid://4483345998",
+                Time = 5,
+            })
+            return
+        end
+        if selectedScript and availableScripts[selectedScript] then
+            -- run the selected script function
+            availableScripts[selectedScript]()
+        else
+            OrionLib:MakeNotification({
+                Name = "Error",
+                Content = "Please select a script to run.",
+                Image = "rbxassetid://4483345998",
+                Time = 5,
+            })
+        end
+    end,
+})
+
+-- Initialize Orion UI
+OrionLib:Init()
