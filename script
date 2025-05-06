@@ -15,8 +15,12 @@ local Window = OrionLib:MakeWindow({
     SaveConfig = false,
 })
 
--- Define the correct key value manually
-local correctKey = "KEY_UPDATESOON" -- Change this key as you like
+-- Define the correct key values manually
+local correctKeys = {
+    "KEY_UPDATESOON",
+    "KEY_FREE24H",
+    "ShiinaMahiru"
+}
 
 local userKey = ""
 local accessGranted = false
@@ -84,8 +88,15 @@ UnlockTab:AddTextbox({
 UnlockTab:AddButton({
     Name = "xác nhận Key",
     Callback = function()
-        if inputKey == correctKey then
-            accessGranted = true
+        accessGranted = false  -- Reset access status
+        for _, key in ipairs(correctKeys) do
+            if inputKey == key then
+                accessGranted = true
+                break
+            end
+        end
+        
+        if accessGranted then
             OrionLib:MakeNotification({
                 Name = "Access Granted",
                 Content = "key whitelist check success , dùng đc r đó",
@@ -129,25 +140,4 @@ ScriptsTab:AddButton({
         if not accessGranted then
             OrionLib:MakeNotification({
                 Name = "Access Denied",
-                Content = "nhập key mới chạy đc script!",
-                Image = "rbxassetid://4483345998",
-                Time = 5,
-            })
-            return
-        end
-        if selectedScript and availableScripts[selectedScript] then
-            -- run the selected script function
-            availableScripts[selectedScript]()
-        else
-            OrionLib:MakeNotification({
-                Name = "Error",
-                Content = "chưa chọn script kìa.",
-                Image = "rbxassetid://4483345998",
-                Time = 5,
-            })
-        end
-    end,
-})
-
--- Initialize Orion UI
-OrionLib:Init()
+                Content = "nhập key mới chạy
