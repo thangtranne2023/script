@@ -16,7 +16,7 @@ local Window = OrionLib:MakeWindow({
 })
 
 -- Define the correct key value manually
-local correctKey = "KEY_DEVADMIN" -- Change this key as you like
+local correctKey = "KEY_UPDATESOON" -- Change this key as you like
 
 local userKey = ""
 local accessGranted = false
@@ -52,6 +52,15 @@ local availableScripts = {
         OrionLib:MakeNotification({
             Name = "New Script",
             Content = "Grow a garden v2",
+            Image = "rbxassetid://4483345998",
+            Time = 5,
+        })
+    end,
+    ["Hakiyuu legend"] = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Xm2iufas09ijmF/sigma-hub/refs/heads/main/temp.lua", true))() -- Replace with your script URL
+        OrionLib:MakeNotification({
+            Name = "New Script",
+            Content = "hakiyuu loaded",
             Image = "rbxassetid://4483345998",
             Time = 5,
         })
