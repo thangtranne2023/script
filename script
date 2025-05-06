@@ -11,12 +11,12 @@ local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jens
 local Window = OrionLib:MakeWindow({
     Name = "ShiinaMahiruPublicScript (premium)",
     HidePremium = true,
-    IntroText = "Enter key to run script!",
+    IntroText = "Nhập Key Đi nào!",
     SaveConfig = false,
 })
 
 -- Define the correct key value manually
-local correctKey = "KEY_PREMIUM" -- Change this key as you like
+local correctKey = "KEY_DEVADMIN" -- Change this key as you like
 
 local userKey = ""
 local accessGranted = false
@@ -36,12 +36,22 @@ local ScriptsTab = Window:MakeTab({
 })
 
 -- Custom scripts definitions: only BananaHub loader
+-- Custom scripts definitions: add your new script here
 local availableScripts = {
-    ["grow a garden Loader"] = function()
+    ["grow a garden OLD MENU Loader"] = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/Grow-a-Garden/main/Grow_A_Garden.lua"))()
         OrionLib:MakeNotification({
             Name = "Grow a garden",
-            Content = "Grow A garden ran",
+            Content = "Grow A garden v1",
+            Image = "rbxassetid://4483345998",
+            Time = 5,
+        })
+    end,
+    ["Grow a garden NEW MENU V2"] = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/depthso/Grow-a-Garden/refs/heads/main/autofarm.lua')))() -- Replace with your script URL
+        OrionLib:MakeNotification({
+            Name = "New Script",
+            Content = "Grow a garden v2",
             Image = "rbxassetid://4483345998",
             Time = 5,
         })
@@ -53,7 +63,7 @@ local inputKey = ""
 
 -- Unlock Tab: Add Textbox for key input
 UnlockTab:AddTextbox({
-    Name = "Enter Key",
+    Name = "nhập key",
     Default = "",
     TextDisappear = true,
     Callback = function(text)
@@ -63,20 +73,20 @@ UnlockTab:AddTextbox({
 
 -- Unlock Tab: Add submit button
 UnlockTab:AddButton({
-    Name = "Submit Key",
+    Name = "xác nhận Key",
     Callback = function()
         if inputKey == correctKey then
             accessGranted = true
             OrionLib:MakeNotification({
                 Name = "Access Granted",
-                Content = "Correct key! You now have access to scripts.",
+                Content = "key whitelist check success , dùng đc r đó",
                 Image = "rbxassetid://4483345998",
                 Time = 5,
             })
         else
             OrionLib:MakeNotification({
                 Name = "Access Denied",
-                Content = "Incorrect key. Please try again.",
+                Content = "key sai r m dùng crack à?.",
                 Image = "rbxassetid://4483345998",
                 Time = 5,
             })
@@ -90,7 +100,7 @@ UnlockTab:AddButton({
 local selectedScript = nil
 
 ScriptsTab:AddDropdown({
-    Name = "Select a Script",
+    Name = "chọn script",
     Default = nil,
     Options = (function()
         local keys = {}
@@ -105,12 +115,12 @@ ScriptsTab:AddDropdown({
 })
 
 ScriptsTab:AddButton({
-    Name = "Run Script",
+    Name = "chạy Script",
     Callback = function()
         if not accessGranted then
             OrionLib:MakeNotification({
                 Name = "Access Denied",
-                Content = "Please enter the correct key to unlock scripts!",
+                Content = "nhập key mới chạy đc script!",
                 Image = "rbxassetid://4483345998",
                 Time = 5,
             })
@@ -122,7 +132,7 @@ ScriptsTab:AddButton({
         else
             OrionLib:MakeNotification({
                 Name = "Error",
-                Content = "Please select a script to run.",
+                Content = "chưa chọn script kìa.",
                 Image = "rbxassetid://4483345998",
                 Time = 5,
             })
