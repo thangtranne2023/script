@@ -18,8 +18,8 @@ local Window = OrionLib:MakeWindow({
 -- Define the correct key value manually
 local correctKeys = {
     "KEY_UPDATESOON",
-    "ANOTHER_KEY",
-    "YET_ANOTHER_KEY"
+    "KEY_SUCCAC",
+    "KEY_ShiinaMahiru"
 }
 
 local userKey = ""
