@@ -1,0 +1,109 @@
+local RS = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+
+-- Fluent UI
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = "Cộng Đồng Việt Nam",
+    SubTitle = "Giao Hàng Grab",
+    Size = UDim2.fromOffset(500, 350),
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local GrabTab = Window:AddTab({ Title = "📦 Grab Job", Icon = "🚚" })
+
+local jobInProgress = false
+local markerPart = nil
+local markerSpeed = 1
+
+-- Tạo marker bay
+local function createMarker(pos)
+    markerPart = Instance.new("Part")
+    markerPart.Anchored = true
+    markerPart.CanCollide = false
+    markerPart.Size = Vector3.new(2, 2, 2)
+    markerPart.Shape = Enum.PartType.Ball
+    markerPart.Material = Enum.Material.Neon
+    markerPart.BrickColor = BrickColor.new("Lime green")
+    markerPart.Transparency = 0.3
+    markerPart.CFrame = CFrame.new(pos + Vector3.new(0, 8, 0))
+    markerPart.Parent = workspace
+
+    local tweenTime = math.clamp(4 / markerSpeed, 0.5, 8)
+    local tween = TweenService:Create(markerPart, TweenInfo.new(tweenTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {
+        Position = markerPart.Position + Vector3.new(0, 2, 0)
+    })
+    tween:Play()
+end
+
+-- Check chạm marker
+RunService.RenderStepped:Connect(function()
+    if markerPart and jobInProgress then
+        local char = Player.Character
+        if char and char:FindFirstChild("HumanoidRootPart") then
+            local dist = (char.HumanoidRootPart.Position - markerPart.Position).Magnitude
+            if dist < 6 then
+                RS.CompleteGrabJob:FireServer()
+                Fluent:Notify({
+                    Title = "✅ Thành Công!",
+                    Content = "Bạn đã giao hàng!",
+                    Duration = 4
+                })
+                markerPart:Destroy()
+                markerPart = nil
+                jobInProgress = false
+            end
+        end
+    end
+end)
+
+-- UI: Nhận Job
+GrabTab:AddButton({
+    Title = "🛵 Nhận Đơn Grab",
+    Description = "Lấy đơn hàng và giao tới điểm ngẫu nhiên",
+    Callback = function()
+        if jobInProgress then
+            Fluent:Notify({
+                Title = "⚠️ Job đang chạy",
+                Content = "Hãy hoàn thành đơn hiện tại trước!",
+                Duration = 3
+            })
+            return
+        end
+        RS.StartGrabJob:FireServer()
+    end
+})
+
+-- Slider điều chỉnh tốc độ marker
+GrabTab:AddSlider({
+    Title = "⚙️ Tốc độ Marker",
+    Description = "Chỉnh tốc độ bay lên/xuống (1 = mặc định)",
+    Min = 0.5,
+    Max = 3,
+    Default = 1,
+    Callback = function(val)
+        markerSpeed = val
+        if val > 2 then
+            Fluent:Notify({
+                Title = "⚠️ Cẩn thận",
+                Content = "Tốc độ cao có thể bị phát hiện!",
+                Duration = 4
+            })
+        end
+    end
+})
+
+-- Khi server gửi điểm giao
+RS.StartGrabJob.OnClientEvent:Connect(function(dropPos)
+    createMarker(dropPos)
+    Fluent:Notify({
+        Title = "📍 Nhận đơn",
+        Content = "Đi giao hàng ngay!",
+        Duration = 3
+    })
+    jobInProgress = true
+end)
