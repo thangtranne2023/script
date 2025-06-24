@@ -1,109 +1,67 @@
-local RS = game:GetService("ReplicatedStorage")
-local TweenService = game:GetService("TweenService")
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
-local Player = Players.LocalPlayer
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local char = player.Character or player.CharacterAdded:Wait()
+local hrp = char:WaitForChild("HumanoidRootPart")
+local UIS = game:GetService("UserInputService")
+local RS = game:GetService("RunService")
 
--- Fluent UI
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local Window = Fluent:CreateWindow({
-    Title = "Cộng Đồng Việt Nam",
-    SubTitle = "Giao Hàng Grab",
-    Size = UDim2.fromOffset(500, 350),
-    Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.LeftControl
-})
+-- Cài đặt
+local BOSS_NAME = "Boss" -- Đổi theo tên Model Boss trong Workspace
+local HOVER_HEIGHT = 20
+local CLICK_DELAY = 0.2
+local AUTO_ENABLED = false
 
-local GrabTab = Window:AddTab({ Title = "📦 Grab Job", Icon = "🚚" })
+-- UI Toggle
+local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+screenGui.Name = "AutoAttackUI"
 
-local jobInProgress = false
-local markerPart = nil
-local markerSpeed = 1
+local toggleBtn = Instance.new("TextButton", screenGui)
+toggleBtn.Size = UDim2.new(0, 150, 0, 40)
+toggleBtn.Position = UDim2.new(0, 20, 0.8, 0)
+toggleBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+toggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleBtn.Font = Enum.Font.GothamBlack
+toggleBtn.TextSize = 18
+toggleBtn.Text = "Auto: Tắt"
 
--- Tạo marker bay
-local function createMarker(pos)
-    markerPart = Instance.new("Part")
-    markerPart.Anchored = true
-    markerPart.CanCollide = false
-    markerPart.Size = Vector3.new(2, 2, 2)
-    markerPart.Shape = Enum.PartType.Ball
-    markerPart.Material = Enum.Material.Neon
-    markerPart.BrickColor = BrickColor.new("Lime green")
-    markerPart.Transparency = 0.3
-    markerPart.CFrame = CFrame.new(pos + Vector3.new(0, 8, 0))
-    markerPart.Parent = workspace
-
-    local tweenTime = math.clamp(4 / markerSpeed, 0.5, 8)
-    local tween = TweenService:Create(markerPart, TweenInfo.new(tweenTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {
-        Position = markerPart.Position + Vector3.new(0, 2, 0)
-    })
-    tween:Play()
+-- Auto Click Function
+local function autoClick()
+    while AUTO_ENABLED do
+        local tool = player.Character:FindFirstChildOfClass("Tool")
+        if tool and tool:FindFirstChild("Activate") then
+            tool:Activate()
+        end
+        wait(CLICK_DELAY)
+    end
 end
 
--- Check chạm marker
-RunService.RenderStepped:Connect(function()
-    if markerPart and jobInProgress then
-        local char = Player.Character
-        if char and char:FindFirstChild("HumanoidRootPart") then
-            local dist = (char.HumanoidRootPart.Position - markerPart.Position).Magnitude
-            if dist < 6 then
-                RS.CompleteGrabJob:FireServer()
-                Fluent:Notify({
-                    Title = "✅ Thành Công!",
-                    Content = "Bạn đã giao hàng!",
-                    Duration = 4
-                })
-                markerPart:Destroy()
-                markerPart = nil
-                jobInProgress = false
-            end
+-- Auto Follow + Attack
+RS.RenderStepped:Connect(function()
+    if not AUTO_ENABLED then return end
+
+    local boss = workspace:FindFirstChild(BOSS_NAME)
+    if boss and boss:FindFirstChild("HumanoidRootPart") then
+        -- Equip vũ khí slot 1
+        local tool = player.Backpack:FindFirstChildOfClass("Tool")
+        if tool then
+            tool.Parent = player.Character
+        end
+
+        -- Bay trên đầu boss
+        local targetPos = boss.HumanoidRootPart.Position + Vector3.new(0, HOVER_HEIGHT, 0)
+        hrp.CFrame = CFrame.new(targetPos)
+
+        -- Auto Click nếu gần
+        if (hrp.Position - boss.HumanoidRootPart.Position).Magnitude <= HOVER_HEIGHT + 10 then
+            -- đảm bảo đang auto click
+            task.spawn(autoClick)
         end
     end
 end)
 
--- UI: Nhận Job
-GrabTab:AddButton({
-    Title = "🛵 Nhận Đơn Grab",
-    Description = "Lấy đơn hàng và giao tới điểm ngẫu nhiên",
-    Callback = function()
-        if jobInProgress then
-            Fluent:Notify({
-                Title = "⚠️ Job đang chạy",
-                Content = "Hãy hoàn thành đơn hiện tại trước!",
-                Duration = 3
-            })
-            return
-        end
-        RS.StartGrabJob:FireServer()
-    end
-})
-
--- Slider điều chỉnh tốc độ marker
-GrabTab:AddSlider({
-    Title = "⚙️ Tốc độ Marker",
-    Description = "Chỉnh tốc độ bay lên/xuống (1 = mặc định)",
-    Min = 0.5,
-    Max = 3,
-    Default = 1,
-    Callback = function(val)
-        markerSpeed = val
-        if val > 2 then
-            Fluent:Notify({
-                Title = "⚠️ Cẩn thận",
-                Content = "Tốc độ cao có thể bị phát hiện!",
-                Duration = 4
-            })
-        end
-    end
-})
-
--- Khi server gửi điểm giao
-RS.StartGrabJob.OnClientEvent:Connect(function(dropPos)
-    createMarker(dropPos)
-    Fluent:Notify({
-        Title = "📍 Nhận đơn",
-        Content = "Đi giao hàng ngay!",
-        Duration = 3
-    })
-    jobInProgress = true
+-- UI Toggle Control
+toggleBtn.MouseButton1Click:Connect(function()
+    AUTO_ENABLED = not AUTO_ENABLED
+    toggleBtn.Text = AUTO_ENABLED and "Auto: Bật" or "Auto: Tắt"
+    toggleBtn.BackgroundColor3 = AUTO_ENABLED and Color3.fromRGB(60, 180, 80) or Color3.fromRGB(30, 30, 30)
 end)
