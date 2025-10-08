@@ -1,73 +1,519 @@
+-- Load Orion Library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+-- Biến toàn cục
+local isPaid = false
 local player = game.Players.LocalPlayer
-local char = player.Character or player.CharacterAdded:Wait()
-local hrp = char:WaitForChild("HumanoidRootPart")
-local RS = game:GetService("RunService")
+local flyEnabled = false
+local vehicleFlyEnabled = false
+local vehicleNoclipEnabled = false
+local fullbrightEnabled = false
+local bodyVelocityFly, bodyAngularVelocityFly = nil, nil
+local bodyVelocityVehicle, bodyAngularVelocityVehicle = nil, nil
 
-local AUTO_ENABLED = false
-local HOVER_HEIGHT = 20
-local CLICK_DELAY = 0.15
+-- Function check key từ Pastebin
+local function checkKey(inputKey)
+    local success, result = pcall(function()
+        local pastebinUrl = "https://pastebin.com/raw/YourPastebinID"  -- Thay bằng link Pastebin raw của bạn (ví dụ: https://pastebin.com/raw/abc123)
+        local validKey = game:HttpGet(pastebinUrl)
+        return inputKey == validKey:gsub("%s+", "")  -- So sánh key (bỏ khoảng trắng)
+    end)
+    return success and result or false
+end
 
--- UI
-local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
-screenGui.Name = "MobAttackUI"
+-- Function chung để check premium trước khi thực thi (cho free: block non-lighting)
+local function requirePremium(featureName)
+    if not isPaid then
+        OrionLib:MakeNotification({
+            Name = "Premium Required",
+            Content = "Buy premium key to use " .. featureName .. "! (Free version limited to Lighting features)",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        return false
+    end
+    return true
+end
 
-local toggleBtn = Instance.new("TextButton", screenGui)
-toggleBtn.Size = UDim2.new(0, 160, 0, 40)
-toggleBtn.Position = UDim2.new(0, 20, 0.85, 0)
-toggleBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-toggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-toggleBtn.Font = Enum.Font.GothamBold
-toggleBtn.TextSize = 18
-toggleBtn.Text = "Auto Mob: Tắt"
+-- Implement Fly / UnFly (từ Infinite Yield)
+local function enableFly()
+    local character = player.Character
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local root = character.HumanoidRootPart
+        flyEnabled = true
+        bodyVelocityFly = Instance.new("BodyVelocity")
+        bodyVelocityFly.MaxForce = Vector3.new(4000, 4000, 4000)
+        bodyVelocityFly.Velocity = Vector3.new(0, 0, 0)
+        bodyVelocityFly.Parent = root
 
--- Tìm mob gần nhất
-local function getNearestMob()
-    local closest
-    local dist = math.huge
-    for _, obj in ipairs(workspace:GetDescendants()) do
-        if obj:IsA("Model") and obj:FindFirstChild("Humanoid") and obj:FindFirstChild("HumanoidRootPart") and obj ~= char then
-            local d = (hrp.Position - obj.HumanoidRootPart.Position).Magnitude
-            if d < dist then
-                closest = obj
-                dist = d
+        bodyAngularVelocityFly = Instance.new("BodyAngularVelocity")
+        bodyAngularVelocityFly.MaxTorque = Vector3.new(4000, 4000, 4000)
+        bodyAngularVelocityFly.AngularVelocity = Vector3.new(0, 0, 0)
+        bodyAngularVelocityFly.Parent = root
+
+        spawn(function()
+            while flyEnabled do
+                local camera = workspace.CurrentCamera
+                local direction = camera.CFrame.LookVector
+                local speed = 50  -- Tốc độ mặc định
+                if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftShift) then
+                    speed = speed * 2
+                end
+                bodyVelocityFly.Velocity = direction * speed
+                wait()
+            end
+        end)
+        print("Fly enabled!")
+    end
+end
+
+local function disableFly()
+    flyEnabled = false
+    if bodyVelocityFly then bodyVelocityFly:Destroy() end
+    if bodyAngularVelocityFly then bodyAngularVelocityFly:Destroy() end
+    print("Fly disabled!")
+end
+
+-- Implement VehicleFly / UnVehicleFly (từ Infinite Yield)
+local function enableVehicleFly()
+    local character = player.Character
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local root = character.HumanoidRootPart
+        local seat = root:FindFirstChildOfClass("VehicleSeat")
+        if seat then
+            vehicleFlyEnabled = true
+            bodyVelocityVehicle = Instance.new("BodyVelocity")
+            bodyVelocityVehicle.MaxForce = Vector3.new(4000, 4000, 4000)
+            bodyVelocityVehicle.Velocity = Vector3.new(0, 0, 0)
+            bodyVelocityVehicle.Parent = seat
+
+            bodyAngularVelocityVehicle = Instance.new("BodyAngularVelocity")
+            bodyAngularVelocityVehicle.MaxTorque = Vector3.new(4000, 4000, 4000)
+            bodyAngularVelocityVehicle.AngularVelocity = Vector3.new(0, 0, 0)
+            bodyAngularVelocityVehicle.Parent = seat
+
+            spawn(function()
+                while vehicleFlyEnabled do
+                    local camera = workspace.CurrentCamera
+                    local direction = camera.CFrame.LookVector
+                    local speed = 50  -- Tốc độ mặc định
+                    if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftShift) then
+                        speed = speed * 2
+                    end
+                    bodyVelocityVehicle.Velocity = direction * speed
+                    wait()
+                end
+            end)
+            print("Vehicle Fly enabled!")
+        end
+    end
+end
+
+local function disableVehicleFly()
+    vehicleFlyEnabled = false
+    if bodyVelocityVehicle then bodyVelocityVehicle:Destroy() end
+    if bodyAngularVelocityVehicle then bodyAngularVelocityVehicle:Destroy() end
+    print("Vehicle Fly disabled!")
+end
+
+-- Implement VehicleNoclip / VehicleClip (từ Infinite Yield)
+local function enableVehicleNoclip()
+    local character = player.Character
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local root = character.HumanoidRootPart
+        local seat = root:FindFirstChildOfClass("VehicleSeat")
+        if seat then
+            vehicleNoclipEnabled = true
+            spawn(function()
+                while vehicleNoclipEnabled do
+                    for _, part in pairs(character:GetDescendants()) do
+                        if part:IsA("BasePart") and part ~= root then
+                            part.CanCollide = false
+                        end
+                    end
+                    wait()
+                end
+            end)
+            print("Vehicle Noclip enabled!")
+        end
+    end
+end
+
+local function disableVehicleNoclip()
+    vehicleNoclipEnabled = false
+    local character = player.Character
+    if character then
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = true
             end
         end
     end
-    return closest
+    print("Vehicle Noclip disabled!")
 end
 
--- Click Tool
-local function autoClick()
-    while AUTO_ENABLED do
-        local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
-        if tool then tool:Activate() end
-        task.wait(CLICK_DELAY)
+-- Implement LoopFullBright / NoFog (từ Infinite Yield) - Luôn hoạt động
+local function enableLoopFullBright()
+    fullbrightEnabled = true
+    spawn(function()
+        while fullbrightEnabled do
+            game.Lighting.Brightness = 1
+            game.Lighting.FogEnd = 100000
+            game.Lighting.GlobalShadows = false
+            game.Lighting.FogStart = 0
+            wait()
+        end
+    end)
+    print("Loop FullBright enabled!")
+end
+
+local function disableLoopFullBright()
+    fullbrightEnabled = false
+    -- Khôi phục mặc định
+    game.Lighting.Brightness = 2
+    game.Lighting.FogEnd = 100000
+    game.Lighting.GlobalShadows = true
+    print("Loop FullBright disabled!")
+end
+
+local function noFog()
+    game.Lighting.FogEnd = 100000
+    game.Lighting.FogStart = 0
+    print("Fog disabled!")
+end
+
+-- Function load Main UI (load full GUI cho cả free/paid, nhưng free block non-lighting)
+function loadMainUI(paid)
+    isPaid = paid  -- Set global paid status
+    local Window = OrionLib:MakeWindow({
+        Name = "Twisted Beta Hub " .. (paid and "(Paid - Full)" or "(Free - Limited)"),
+        HidePremium = false,
+        SaveConfig = true,
+        ConfigFolder = "TwistedBeta" .. (paid and "Paid" or "Free")
+    })
+
+    -- Notification chào mừng
+    OrionLib:MakeNotification({
+        Name = "Twisted Beta Hub",
+        Content = paid and "Paid Full Version Loaded! All features unlocked." or "Free Version Loaded. Lighting features work, others require premium key.",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+
+    -- Tab Player Mods (luôn load, nhưng check premium trong callback)
+    local PlayerTab = Window:MakeTab({
+        Name = "Player Mods",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    PlayerTab:AddSection({
+        Name = "Basic Enhancements"
+    })
+
+    -- Speed Toggle (block nếu free)
+    local SpeedToggle = PlayerTab:AddToggle({
+        Name = "Speed Hack",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("Speed Hack") then return end
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                player.Character.Humanoid.WalkSpeed = Value and 50 or 16
+            end
+        end
+    })
+
+    -- Jump Toggle (block nếu free)
+    local JumpToggle = PlayerTab:AddToggle({
+        Name = "High Jump",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("High Jump") then return end
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                player.Character.Humanoid.JumpPower = Value and 100 or 50
+            end
+        end
+    })
+
+    -- Teleport Button (block nếu free)
+    PlayerTab:AddButton({
+        Name = "Teleport to Spawn",
+        Callback = function()
+            if not requirePremium("Teleport") then return end
+            if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                player.Character.HumanoidRootPart.CFrame = CFrame.new(0, 10, 0)  -- Tùy chỉnh tọa độ
+                print("Teleported!")
+            end
+        end
+    })
+
+    -- Tab Paid Features (luôn load, nhưng check premium trong callback)
+    local PaidTab = Window:MakeTab({
+        Name = "Paid Features",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    PaidTab:AddSection({
+        Name = "Advanced Mods"
+    })
+
+    -- Auto-Farm Toggle (block nếu free)
+    local AutoFarmToggle = PaidTab:AddToggle({
+        Name = "Auto Farm",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("Auto Farm") then return end
+            spawn(function()
+                while Value do
+                    wait(1)
+                    -- Ví dụ farm logic cho Twisted Beta (tùy chỉnh remote)
+                    -- game.ReplicatedStorage.FarmRemote:FireServer()
+                    print("Auto-farming...")
+                end
+            end)
+        end
+    })
+
+    -- ESP Toggle (block nếu free)
+    local ESPToggle = PaidTab:AddToggle({
+        Name = "Player ESP",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("Player ESP") then return end
+            for _, plr in pairs(game.Players:GetPlayers()) do
+                if plr ~= player and plr.Character then
+                    local highlight = plr.Character:FindFirstChild("Highlight")
+                    if Value then
+                        if not highlight then
+                            highlight = Instance.new("Highlight")
+                            highlight.Parent = plr.Character
+                            highlight.FillColor = Color3.new(1, 0, 0)
+                        end
+                    else
+                        if highlight then highlight:Destroy() end
+                    end
+                end
+            end
+        end
+    })
+
+    -- Unlock Items Button (block nếu free)
+    PaidTab:AddButton({
+        Name = "Unlock All Items",
+        Callback = function()
+            if not requirePremium("Unlock Items") then return end
+            print("Unlocking items... (Paid feature)")
+            -- Tùy chỉnh logic unlock
+        end
+    })
+
+    -- Tab Movement (luôn load, nhưng check premium trong callback)
+    local MovementTab = Window:MakeTab({
+        Name = "Movement (IY)",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    MovementTab:AddSection({
+        Name = "Infinite Yield Movement"
+    })
+
+    -- Fly Toggle (block nếu free)
+    MovementTab:AddToggle({
+        Name = "Fly",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("Fly") then return end
+            if Value then enableFly() else disableFly() end
+        end
+    })
+
+    -- Vehicle Fly Toggle (block nếu free)
+    MovementTab:AddToggle({
+        Name = "Vehicle Fly",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("Vehicle Fly") then return end
+            if Value then enableVehicleFly() else disableVehicleFly() end
+        end
+    })
+
+    -- Vehicle Noclip Toggle (block nếu free)
+    MovementTab:AddToggle({
+        Name = "Vehicle Noclip",
+        Default = false,
+        Callback = function(Value)
+            if not requirePremium("Vehicle Noclip") then return end
+            if Value then enableVehicleNoclip() else disableVehicleNoclip() end
+        end
+    })
+
+    -- Tab Lighting (luôn load và luôn hoạt động)
+    local LightingTab = Window:MakeTab({
+        Name = "Lighting (IY)",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    LightingTab:AddSection({
+        Name = "Infinite Yield Lighting (Free Available)"
+    })
+
+    -- No Fog Button (luôn hoạt động)
+    LightingTab:AddButton({
+        Name = "No Fog",
+        Callback = function()
+            noFog()
+            OrionLib:MakeNotification({
+                Name = "Lighting",
+                Content = "Fog disabled! (Free feature)",
+                Time = 3
+            })
+        end
+    })
+
+    -- Loop FullBright Toggle (luôn hoạt động)
+    LightingTab:AddToggle({
+        Name = "Loop FullBright",
+        Default = false,
+        Callback = function(Value)
+            if Value then 
+                enableLoopFullBright()
+                OrionLib:MakeNotification({
+                    Name = "Lighting",
+                    Content = "FullBright enabled! (Free feature)",
+                    Time = 3
+                })
+            else 
+                disableLoopFullBright()
+                OrionLib:MakeNotification({
+                    Name = "Lighting",
+                    Content = "FullBright disabled!",
+                    Time = 3
+                })
+            end
+        end
+    })
+
+    -- Nếu free, thêm button upgrade ở cuối Lighting tab
+    if not paid then
+        LightingTab:AddButton({
+            Name = "Buy Premium Key",
+            Callback = function()
+                OrionLib:MakeNotification({
+                    Name = "Upgrade",
+                    Content = "Get a premium key from trusted source to unlock all features! (Discord: yourserver)",
+                    Image = "rbxassetid://4483345998",
+                    Time = 6
+                })
+                -- setclipboard("https://discord.gg/yourserver")  -- Uncomment để copy link Discord
+            end
+        })
     end
+
+    -- Khởi tạo UI
+    OrionLib:Init()
 end
 
--- Bay & tấn công
-RS.RenderStepped:Connect(function()
-    if not AUTO_ENABLED then return end
-    local mob = getNearestMob()
-    if mob then
-        -- Equip
-        local tool = player.Backpack:FindFirstChildOfClass("Tool")
-        if tool then tool.Parent = player.Character end
+-- Key Window (chạy đầu tiên)
+local KeyWindow = OrionLib:MakeWindow({
+    Name = "Twisted Beta Hub - Key Auth",
+    HidePremium = false,
+    SaveConfig = false,
+    ConfigFolder = "TwistedBetaKey"
+})
 
-        -- Hover
-        local pos = mob.HumanoidRootPart.Position + Vector3.new(0, HOVER_HEIGHT, 0)
-        hrp.CFrame = CFrame.new(pos)
+local KeyTab = KeyWindow:MakeTab({
+    Name = "Authorization",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
 
-        -- Auto click
-        if (hrp.Position - mob.HumanoidRootPart.Position).Magnitude <= HOVER_HEIGHT + 10 then
-            task.spawn(autoClick)
+KeyTab:AddSection({
+    Name = "Enter your key to unlock Paid Full features"
+})
+
+-- Textbox nhập key
+local KeyTextbox = KeyTab:AddTextbox({
+    Name = "Key Input",
+    Default = "",
+    TextDisappear = false,
+    Callback = function(Value)
+        -- Chỉ input
+    end
+})
+
+-- Verify Button
+local VerifyButton = KeyTab:AddButton({
+    Name = "Verify Key",
+    Callback = function()
+        local inputKey = KeyTextbox.Value
+        if inputKey == "" then
+            OrionLib:MakeNotification({
+                Name = "Error",
+                Content = "Please enter a key!",
+                Image = "rbxassetid://4483345998",
+                Time = 3
+            })
+            return
+        end
+        
+        OrionLib:MakeNotification({
+            Name = "Checking...",
+            Content = "Verifying your key...",
+            Image = "rbxassetid://4483345998",
+            Time = 2
+        })
+        
+        local keyValid = checkKey(inputKey)
+        
+        if keyValid then
+            isPaid = true
+            OrionLib:MakeNotification({
+                Name = "Success",
+                Content = "Paid Full Version unlocked! Loading all features.",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            KeyWindow:Destroy()
+            loadMainUI(true)
+        else
+            isPaid = false
+            OrionLib:MakeNotification({
+                Name = "Invalid Key",
+                Content = "Invalid key! Loading Free version (Full UI, but limited to Lighting).",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            wait(3)
+            KeyWindow:Destroy()
+            loadMainUI(false)
         end
     end
-end)
+})
 
--- Toggle UI
-toggleBtn.MouseButton1Click:Connect(function()
-    AUTO_ENABLED = not AUTO_ENABLED
-    toggleBtn.Text = AUTO_ENABLED and "Auto Mob: Bật" or "Auto Mob: Tắt"
-    toggleBtn.BackgroundColor3 = AUTO_ENABLED and Color3.fromRGB(40, 180, 80) or Color3.fromRGB(30, 30, 30)
+-- Skip to Free (load full UI nhưng limited)
+local SkipButton = KeyTab:AddButton({
+    Name = "Use Free Version (Full UI - Lighting Only)",
+    Callback = function()
+        isPaid = false
+        OrionLib:MakeNotification({
+            Name = "Free Mode",
+            Content = "Loading Free version. Full UI shown, but only Lighting works. Buy key for full access!",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        wait(2)
+        KeyWindow:Destroy()
+        loadMainUI(false)
+    end
+})
+
+-- Tự động focus key input
+spawn(function()
+    wait(1)
+    if KeyTextbox and KeyTextbox.Textbox then
+        KeyTextbox.Textbox.Focus()
+    end
 end)
