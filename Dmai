@@ -1,1 +1,1003 @@
---[[ v1.0.0 https://wearedevs.net/obfuscator ]] return(function(...)local H={"\085\099\105\108\070\054\074\118\115\109\076\057\085\043\106\098\089\047\111\061";"\088\109\088\074\082\069\106\110\070\074\075\077\108\088\057\078\066\114\084\061";"\108\098\082\056\070\103\061\061";"\088\109\055\053\075\109\088\072\113\114\115\069\089\109\088\083\089\109\088\050\113\111\061\061","\075\080\088\074\049\054\088\074\070\073\115\105\070\071\076\069";"\079\100\103\069\108\065\110\106\079\103\061\061";"\122\119\107\061","\079\084\121\090\084\109\089\090\075\071\106\082\052\043\055\074";"\075\098\115\072\066\054\077\099","","\049\054\055\074\066\117\061\061","\111\088\111\061";"\067\083\088\068\107\065\073\056\099\057\065\111\081\048\069\087\114\067\077\121\111\111\121\081\050\072\102\107\101\056\067\106\085\081\066\080\103\099\122\065\049\099\116\061";"\104\069\108\109\104\098\069\056\052\109\089\087","\054\050\110\080\049\109\111\074\049\054\082\074\120\050\050\098\070\098\070\061","\115\098\106\043\054\114\088\070\084\080\055\077\108\083\105\102\120\117\061\061";"\075\109\082\105\049\109\107\061","\075\043\082\051","\049\109\088\097";"\108\080\089\080\070\050\076\077\082\109\055\116\085\054\119\056\052\084\107\061","\089\109\055\100\049\109\084\061","\073\056\119\099\070\107\061\061";"\052\055\057\087\084\056\105\109\104\050\053\118\088\109\056\104\120\071\103\061";"\120\043\115\074\075\114\089\069\089\117\061\061","\079\103\061\061","\108\073\121\072\049\098\113\061";"\089\109\119\097\089\054\056\100\108\073\113\061","\108\080\088\074\108\080\088\097\089\103\061\061";"\108\074\089\115\066\055\082\069\120\080\055\068\049\083\082\072","\108\071\076\081\049\098\113\061";"\073\056\119\106\049\071\115\069\085\117\061\061";"\049\090\113\061";"\049\090\114\061","\081\052\073\047\117\104\048\078\102\112\084\068\067\068\049\043\090\114\104\084\074\043\065\057\103\053\109\110\086\103\121\098\073\074\116\118\112\076\076\070\057\070\048\117\122\075\068\105\084\049\074\056\108\067\098\122\107\065\069\112\116\051\103\077\052\106\057\085\122\047\084\050\079\048\082\079\075\109\081\101\112\117\065\106\121\118\109\043\053\117\061\061","\075\071\088\053\049\098\108\069";"\073\056\119\053\108\073\115\105\089\109\055\100\049\109\084\061","\073\056\119\116\108\054\118\061";"\108\080\055\053\108\111\061\061","\108\080\056\105\089\109\082\110";"\075\071\055\097\108\109\119\053","\115\114\053\076\084\084\053\057\052\109\076\118\115\071\069\098\079\055\052\061","\069\052\110\071\047\117\113\075\083\049\079\101\067\069\077\090\048\066\079\103\055\089\073\065";"\090\098\043\100";"\070\080\119\097\070\080\055\074";"\089\109\119\047\089\043\121\106\049\071\075\061";"\104\056\050\061","\108\114\056\121\111\098\105\069\115\074\088\099\104\074\056\043";"\089\054\077\107\070\054\082\051";"\089\080\069\068\084\109\050\074\089\114\056\115\052\056\082\074\088\074\110\061","\070\099\069\074\108\111\061\061","\049\109\119\105\108\043\082\074\075\071\069\097\108\107\061\061","\070\080\105\105\075\103\061\061"}local function d(d)return H[d-(-565799-(-626247))]end for d,A in ipairs({{-154784-(-154785),814415-814363};{-304412+304413,-809078-(-809091)},{217538-217524,775064+-775012}})do while A[-282496-(-282497)]<A[890865-890863]do H[A[-214530+214531]],H[A[103625+-103623]],A[66968+-66967],A[682768+-682766]=H[A[-859310+859312]],H[A[135421+-135420]],A[-160153+160154]+(443574+-443573),A[931461+-931459]-(-2965-(-2966))end end do local d=string.len local A=string.char local y=H local t=table.concat local o=type local m={q=1043261+-1043253;k=963101-963053;["\053"]=143156-143111,v=273429+-273373,A=535077-535075,l=-586057+586082,Y=570489-570460,T=-1032189+1032209;X=-545+566,["\057"]=175927-175926,s=-72395+72412;D=-937742+937800,M=-935507+935564,["\047"]=1010262+-1010211;C=204153+-204142,G=-442385-(-442423),z=517013+-516953;e=831013-830950;["\051"]=186113+-186070;y=-553316+553325,V=-776600-(-776631),["\050"]=-222678-(-222714);m=402133-402127;c=-137984-(-138023),["\048"]=-594952-(-595014),P=68606+-68552,["\043"]=736398-736391;B=644772-644746;H=-340208+340258,J=-6329-(-6381);O=-532860-(-532874),R=-105074+105087,r=457901+-457897,E=-784158+784195,["\054"]=-408966-(-408988);N=984498-984456;j=-615637+615678;t=300269-300225;["\052"]=776667-776655,U=-605298-(-605328),g=746505+-746473,d=325350-325316,["\055"]=-474181-(-474186),F=1020329+-1020305,["\056"]=877804-877751,i=374872+-374839,Q=-508186+508233,a=-531086+531132;w=423497-423436,I=-725080-(-725103);f=-905618-(-905628),Z=-805466+805469;x=-634259-(-634277);S=-139464-(-139499);o=-809264+809280;p=-1012768+1012827,W=-192091-(-192106);n=-358171-(-358211);K=123956-123928;b=239460+-239405,["\049"]=-948497-(-948524),h=-37840+37859,L=-197418+197467,u=-645414+645414}local u=math.floor local I=table.insert local s=string.sub for H=-566976+566977,#y,-325963-(-325964)do local j=y[H]if o(j)=="\115\116\114\105\110\103"then local o=d(j)local f={}local V=-787393+787394 local O=-885907-(-885907)local r=-395011+395011 while V<=o do local H=s(j,V,V)local d=m[H]if d then O=O+d*(-111889+111953)^((973500+-973497)-r)r=r+(889791+-889790)if r==-375574-(-375578)then r=-630241+630241 local H=u(O/(929687+-864151))local d=u((O%(393964-328428))/(-214357-(-214613)))local y=O%(173163-172907)I(f,A(H,d,y))O=-110705+110705 end elseif H=="\061"then I(f,A(u(O/(-262226-(-327762)))))if V>=o or s(j,V+(480413-480412),V+(-899710-(-899711)))~="\061"then I(f,A(u((O%(-124428-(-189964)))/(-984002-(-984258)))))end break end V=V+(-809049-(-809050))end y[H]=t(f)end end end return(function(H,y,t,o,m,u,I,f,W,O,F,r,i,s,x,j,V,z,A,S)j,r,x,f,S,i,W,s,O,z,A,V,F={},function(H)local d,A=-964009+964010,H[-458874+458875]while A do j[A],d=j[A]-(959898-959897),d+(-423747+423748)if-663685+663685==j[A]then j[A],s[A]=nil,nil end A=H[d]end end,function(H)j[H]=j[H]-(65494-65493)if 492952-492952==j[H]then j[H],s[H]=nil,nil end end,function()V=(954455-954454)+V j[V]=595819-595818 return V end,function(H,d)local y=O(d)local t=function(t,o,m,u)return A(H,{t;o,m,u},d,y)end return t end,function(H,d)local y=O(d)local t=function(t,o)return A(H,{t;o},d,y)end return t end,function(H,d)local y=O(d)local t=function(t)return A(H,{t},d,y)end return t end,{},function(H)for d=394650+-394649,#H,-1005740-(-1005741)do j[H[d]]=(569868-569867)+j[H[d]]end if t then local A=t(true)local y=m(A)y[d(-355889-(-416381))],y[d(1016286-955803)],y[d(-703328+763826)]=H,r,function()return-393706+-2227939 end return A else return o({},{[d(-295588-(-356071))]=r;[d(-49643-(-110135))]=H,[d(-167148-(-227646))]=function()return-3536745-(-915100)end})end end,function(H,d)local y=O(d)local t=function(t,o,m,u,I)return A(H,{t,o,m,u;I},d,y)end return t end,function(A,t,o,m)local G,v,n,r,Y,J,p,w,c,Q,B,M,P,E,R,a,q,I,Z,b,j,F,l,U,N,O,T,X,C,D,K,k,h,V while A do if A<364184+7912177 then if A<518854+4001903 then if A<2984495-472625 then if A<879888+1126967 then if A<428551+1285891 then if A<658010+372702 then if A<383513-(-241796)then n=#v k=873887+-873887 Q=n==k A=Q and 1110268-(-728143)or 636439+2579659 else j=nil s[o[828709+-828704]]=I A=9139926-520481 end else V=s[o[890550-890547]]O=-440458-(-440463)j=V*O V=433707-433450 I=j%V s[o[-380610-(-380613)]]=I A=-664821+8269281 end else if A<1008470+831956 then J=d(667399+-606907)D=d(275850+-215384)n=f()Y=nil r=nil Q={}G=f()T=nil k=i(7854517-788101,{n,E,R,F})s[n]=Q Q=f()I={}b={}M=d(-938488+998985)q=nil s[Q]=k k={}A=H[d(1012771-952281)]T=d(-533528+593980)l=nil Y=16218732846596-344196 F=x(F)s[G]=k v=nil k=H[D]K=nil K=24506429774643-306848 B=s[G]U={[J]=B,[M]=q}D=k(b,U)k=i(-841129+10290975,{G;n,c;E,R,Q})V=D F=d(449383-388894)O=k Q=x(Q)R=x(R)c=x(c)E=x(E)r=H[F]F=r()l=O(T,K)G=x(G)r=V[l]E=13289967152983-(-911573)n=x(n)K=d(412345-351871)T=O(K,E)K=-159641+22486332938368 E=4904489411929-(-926610)l=V[T]F[r]=l F=d(885710-825221)T=d(544848+-484380)r=H[F]F=r()R=d(552877-492382)l=O(T,K)K=d(680062-619611)r=V[l]T=O(K,E)l=V[T]F[r]=l F=d(-779763+840223)r=H[F]T=d(585191+-524692)l=H[T]E=O(R,Y)K=V[E]E=d(-855711-(-916196))E=l[E]T={E(l,K)}F=r(y(T))O=nil r=F()V=nil else A=-909414+5234194 q=-47829+47830 X=M[q]C=X end end else if A<-872535+3169645 then if A<2802412-686604 then G=d(57332-(-3162))h=d(-407676+468130)A=H[h]k=H[G]h=A(k)A=d(832082+-771589)H[A]=h A=3579301-905214 else A=8235209-(-11928)end else if A<1939745-(-543423)then V=s[o[651157-651156]]r=-717138+717139 F=890768+-890766 O=V(r,F)V=467254-467253 j=O==V A=j and 13195739-1010676 or 7554733-(-527939)I=j else A=true A=A and 5361223-1039098 or-366824+13094060 end end end else if A<4645517-896908 then if A<4178900-954132 then if A<361480+2496468 then if A<2994316-379674 then n=n+G Q=n<=k b=not D Q=b and Q b=n>=k b=D and b Q=b or Q b=-14970+7553516 A=Q and b Q=-997621+10690711 A=A or Q else A=-331037+13902453 end else b=3868-3867 k=#v n=-1024468+1024469 Q=r(n,k)n=l(v,Q)A=1272117-675429 Q=nil k=s[c]D=n-b G=T(D)k[n]=G n=nil end else if A<2756361-(-559614)then A=S(-685457+7902435,{r})N={A()}A=H[d(995989+-935533)]I={y(N)}else I=-924017+5347492 V=d(-703084-(-763539))O=901616+15241519 j=V^O A=I-j j=A I=d(-315657+376136)A=I/j I={A}A=H[d(-549666-(-610135))]end end else if A<4265871-47801 then if A<676838+3438145 then j=d(51480+9007)A=H[j]O=-269365+269365 V=s[o[741453-741445]]j=A(V,O)A=-733081+7189933 else k=d(-749189+809682)A=H[k]k=d(415753+-355259)H[k]=A A=3270064-595977 end else if A<876561+3448124 then j=d(-589588+650082)I=d(-180966-(-241459))A=H[I]I=H[j]j=d(178201-117707)H[j]=A j=d(26652+33841)H[j]=I A=1806459-(-697660)j=s[o[-330378-(-330379)]]V=j()else s[V]=C P=s[U]a=990810-990809 w=P+a q=M[w]X=Y+q q=37364+-37108 A=X%q Y=A A=9750783-(-601306)w=s[b]q=c+w w=949411+-949155 X=q%w c=X end end end end else if A<6782144-(-437201)then if A<438795+6006438 then if A<5485957-(-626381)then if A<4636579-(-353764)then if A<5087845-354360 then K=R h=d(156854-96384)N=H[h]h=d(-1005321+1065780)Z=N[h]N=Z(j,K)Z=s[o[-198996+199002]]h=Z()A=305834+11977402 n=N+h Q=n+l n=584419-584163 v=Q%n n=O[V]h=-608491+608492 l=v N=l+h Z=r[N]Q=n..Z K=nil O[V]=Q else I={V}A=H[d(881629-821167)]end else T=not l O=O+F V=O<=r V=T and V T=O>=r T=l and T V=T or V T=11110285-439820 A=V and T V=12650008-884635 A=A or V end else if A<864904+5372242 then A=true A=A and 15110703-200105 or 4195776-960482 else N=s[V]A=N and 9200714-(-434556)or 7406463-(-896100)Z=N end end else if A<6757239-(-412885)then if A<7593617-597547 then V=-776224+776225 O=s[o[-749047+749056]]A={}j=A r=O A=5053711-(-278096)O=818643-818642 F=O O=-371807-(-371807)l=F<O O=V-F else j=s[o[382780+-382779]]I=#j j=923815-923815 A=I==j A=A and 508091+14006082 or 10703062-(-345812)end else if A<-899057+8113442 then I={}A=true s[o[-557205+557206]]=A A=H[d(-1023962+1084438)]else A=3155960-651841 end end end else if A<267542+7484927 then if A<-844341+8384056 then if A<849626+6655702 then if A<7870820-577795 then V=d(-57621+118094)O=11098535-(-765240)I=-387357+9689901 j=V^O A=I-j j=A I=d(-48858-(-109333))A=I/j I={A}A=H[d(773617-713154)]else I=d(833150-772662)A=H[I]K=d(-847846-(-908324))r=d(456253-395799)E=i(4185844-798136,{})j=s[o[709394+-709390]]O=H[r]T=H[K]K={T(E)}T=-954366+954368 l={y(K)}F=l[T]r=O(F)O=d(518235-457768)V=j(r,O)j={V()}I=A(y(j))V=s[o[-588774-(-588779)]]j=I I=V A=V and 11049449-72654 or 1580907-750911 end else Q=n b=Q A=-247041+2848114 v[Q]=b Q=nil end else if A<7646178-92845 then X=A P=-754894+754895 w=M[P]P=false q=w==P A=q and-478793+10603994 or-728578+9533851 C=q else V=s[o[252596+-252593]]O=-859630-(-859631)j=V~=O A=j and 984254+6819991 or 2043036-686540 end end else if A<287651+7765060 then if A<581963+7243604 then O=356295-356263 V=s[o[-381718-(-381721)]]E=813974+-813972 j=V%O Y=517687+-517674 r=s[o[294301+-294297]]T=s[o[746511+-746509]]Q=s[o[693543-693540]]v=Q-j Q=934042-934010 c=v/Q R=Y-c K=E^R l=T/K F=r(l)r=4294136212-(-831084)O=F%r K=-823524+823525 E=-227948+228204 F=-858444-(-858446)r=F^j V=O/r r=s[o[807867-807863]]T=V%K K=4295808473-841177 l=T*K F=r(l)r=s[o[361465+-361461]]l=r(V)O=F+l T=-843774+909310 F=780537+-715001 r=O%F l=O-r F=l/T j=nil T=272297+-272041 l=r%T K=r-l T=K/E E=773120+-772864 Y=-341659+341915 K=F%E r=nil R=F-K E=R/Y F=nil A=10346306-(-702568)R={l;T,K,E}l=nil K=nil V=nil T=nil O=nil E=nil s[o[-132147-(-132148)]]=R else l=s[F]A=11070049-(-261119)I=l end else if A<9036525-800067 then A=-201693+12386756 V=s[o[149397+-149395]]O=s[o[671887+-671884]]j=V==O I=j else v=nil A=-166982+2768055 r=x(r)T=x(T)F=x(F)Y=nil E=x(E)O=x(O)v={}Q=nil V=x(V)c=nil l=nil O=nil V=nil Y={}K=nil n=x(n)R=x(R)l=d(504737-444265)F=H[l]T=d(-980923-(-1041395))K=d(-577704+638186)l=d(-770723+831214)r=F[l]F=f()s[F]=r l=H[T]T=d(-994144+1054593)r=l[T]T=H[K]E=d(616144+-555674)K=d(-639572-(-700068))l=T[K]K=H[E]E=d(365844-305383)c=f()T=K[E]R=f()E=f()Q=244280-244279 K=-979083-(-979083)s[E]=K K=146433-146431 s[R]=K s[c]=Y K={}n=-32407+32663 Y=-268200+268200 k=n n=-22356-(-22357)G=n n=-160978+160978 D=G<n n=Q-G end end end end end else if A<226634+10756635 then if A<8970840-(-764822)then if A<-228458+9318313 then if A<50004+8824172 then if A<-500929+9259365 then if A<-818824+9383145 then s[V]=Z A=s[V]A=A and 884160+1311651 or 15764219-797141 else A=s[o[-704644+704651]]A=A and-88400+4010757 or-898696+7355548 end else I=C A=X A=12099205-(-814915)end else if A<-453902+9407890 then v=d(-564521+625003)c=H[v]v=d(-534455-(-594912))A=9141379-(-923202)Y=c[v]E=Y else M=-247723-(-247725)D=d(659928+-599456)b=-651319+651419 B=376356+-376355 U=333401+-333146 G=f()s[G]=Z I=H[D]q=d(959034+-898580)D=d(-594541+654990)a=966482+-966482 A=I[D]D=-964155-(-964156)I=A(D,b)D=f()s[D]=I A=s[T]b=505083-505083 I=A(b,U)b=f()U=276595+-276594 s[b]=I A=s[T]J=s[D]I=A(U,J)U=f()s[U]=I I=s[T]J=I(B,M)I=-1040763+1040764 A=J==I p=443608-433608 I=d(725520-665053)J=f()s[J]=A M=d(234255-173769)X=H[q]w=s[T]P={w(a,p)}q=X(y(P))X=d(-849187-(-909673))A=d(167425-106961)A=Q[A]C=q..X B=M..C A=A(Q,I,B)B=f()M=d(992002+-931524)C=W(2525302-75594,{T,G;R;O;V;n,J,B,D;U,b,E})s[B]=A I=H[M]M={I(C)}A={y(M)}M=A A=s[J]A=A and 866697+9250169 or-166410+13283626 end end else if A<10148883-512815 then if A<-184788+9665278 then A=s[o[-890716+890717]]j=t[998286+-998285]V=t[801681+-801679]O=A A=O[V]A=A and 949028+11101892 or 503829+11167995 else N=Y==c Z=N A=99628+8202935 end else if A<307268+9350817 then R=d(531424-470967)A=1019176+9050677 E=H[R]I=E else k=854923-854923 n=#v Q=n==k A=-149724+3365822 end end end else if A<-732439+10873975 then if A<9733964-(-362198)then if A<10065211-(-397)then if A<9961945-(-42094)then A=H[d(-312027-(-372511))]I={}else A=R A=E and-560721+10630574 or-83287+9722553 I=E end else Q=S(702182+6533677,{})v=d(-581612+642090)E=f()s[E]=I R=-154410-(-154413)Y=-878842-(-878907)A=s[T]I=A(R,Y)R=f()s[R]=I A=510570-510570 Y=A I=H[v]v={I(Q)}A=-529530-(-529530)c=A A={y(v)}I=102290-102288 v=A A=v[I]Q=A I=d(323722+-263234)h=d(-90741+151195)A=H[I]n=s[O]N=H[h]h=N(Q)N=d(996184+-935717)Z=n(h,N)n={Z()}I=A(y(n))n=f()s[n]=I Z=s[R]N=Z A=668425+9479184 Z=563971-563970 h=Z I=-197917-(-197918)Z=-407608+407608 k=h<Z Z=I-h end else if A<214213+9908363 then C=s[V]A=C and 7942895-401735 or 13850186-936066 I=C else P=911777+-911775 A=147259+8658014 w=M[P]P=s[B]q=w==P C=q end end else if A<-668255+11064830 then if A<11224363-963187 then Z=Z+h G=not k I=Z<=N I=G and I G=Z>=N G=k and G I=G or I G=8716797-(-276730)A=I and G I=995771+5249452 A=A or I else M=nil J=x(J)B=x(B)b=x(b)U=x(U)A=921378+9226231 D=x(D)G=x(G)end else if A<-849023+11551152 then V=O E=-1039763-(-1040018)K=667817+-667817 A=s[o[-15596-(-15597)]]T=A(K,E)j[V]=T A=169199+5162608 V=nil else A=258045+571951 O=s[o[1673-1667]]V=O==j I=V end end end end else if A<13711699-971688 then if A<11369963-(-569924)then if A<12164191-511677 then if A<12319156-999638 then if A<-401365+11468110 then O=d(252634-192152)A=H[d(-743936-(-804386))]V=H[O]O=d(33981-(-26515))j=V[O]O=s[o[958900-958899]]V={j(O)}I={y(V)}else I=d(470408-409921)A=H[I]j=d(961026-900561)I=A(j)I={}A=H[d(531708-471250)]end else T=d(-737910+798382)l=I I=H[T]T=d(-1027881+1088330)A=I[T]K=d(-943207+1003689)T=f()s[T]=A I=H[K]c=d(1101542-1041060)K=d(324133-263680)A=I[K]K=A R=A Y=H[c]E=Y A=Y and-1037226+9983468 or-688150+10752731 end else if A<10714143-(-1021683)then A={}s[o[-750430+750432]]=A T=-260959-(-261214)I=s[o[453395-453392]]F=441864+35184371646968 r=I I=V%F s[o[-581314-(-581318)]]=I l=V%T K=d(-25115+85585)T=-130435-(-130437)F=l+T s[o[-984173+984178]]=F T=H[K]K=d(548658+-488178)l=T[K]T=l(j)R=-908636+908637 l=d(-755948+816419)O[V]=l A=-759660+13042896 E=T K=-56373-(-56374)Y=R l=-976256-(-976266)R=-669696+669696 c=Y<R R=K-Y else A=s[o[34093-34083]]V=s[o[1022778-1022767]]j[A]=V A=s[o[513338+-513326]]V={A(j)}I={y(V)}A=H[d(-691536-(-752017))]end end else if A<676911+11547408 then if A<13033653-963405 then A=-940919+5685608 else A=I and 596537+6852558 or-238100+8857545 end else if A<395309+12310722 then R=R+Y v=not c K=R<=E K=v and K v=R>=E v=c and v K=v or K v=889573+3698124 A=K and v K=14768598-(-498420)A=A or K else A=H[d(-353511+413988)]I={}end end end else if A<14230503-(-403097)then if A<271246+13294450 then if A<14176260-1028451 then if A<-861230+13882429 then A=10480343-128254 s[V]=I else X=s[V]A=X and 1058100-(-787610)or 4048757-(-276023)C=X end else h=-286513+286514 A=s[T]k=-872983+872989 N=A(h,k)A=d(-219411+279904)k=d(979398+-918905)H[A]=N h=H[k]k=217466-217464 A=h>k A=A and 891394+1143160 or-487203+4637520 end else if A<482496+13977439 then A=true A=A and-698173+14230761 or 9170163-(-697341)else O=405750-405589 V=s[o[-753726+753728]]j=V*O V=5861965367836-(-1015949)I=j+V j=35184372886434-797602 A=I%j V=-966632+966633 s[o[-72190-(-72192)]]=A A=21404+1335092 j=s[o[935943+-935940]]I=j~=V end end else if A<-330778+15259322 then if A<15778336-918698 then O=d(-287439+347909)F=f()A=true V=f()j=t s[V]=A I=H[O]K=z(7364+7182521,{F})O=d(-559555+620055)r=f()A=I[O]O=f()s[O]=A A=W(11060998-(-22546),{})s[r]=A A=false T=d(-851136-(-911614))s[F]=A l=H[T]T=l(K)A=T and 360237+7619624 or 11525464-194296 I=T else A=12607477-(-963939)end else if A<14835338-(-261089)then A=true A=599099+2636195 else r=nil A=4338091-(-406598)l=nil T=nil end end end end end end end A=#m return y(I)end,831510-831510,function(H,d)local y=O(d)local t=function(...)return A(H,{...},d,y)end return t end return(F(810113+13905737,{}))(y(I))end)(getfenv and getfenv()or _ENV,unpack or table[d(847016-786559)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+
+
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Hub Configuration
+local HubConfig = {
+    Title = "ShiinaMahiru's Twisted Hub",
+    Version = "v1.0",
+    KeyBind = Enum.KeyCode.RightControl, -- Key to toggle hub
+    Theme = {
+        Primary = Color3.fromRGB(35, 35, 35),
+        Secondary = Color3.fromRGB(45, 45, 45),
+        Accent = Color3.fromRGB(0, 162, 255),
+        Text = Color3.fromRGB(255, 255, 255),
+        Success = Color3.fromRGB(0, 255, 0),
+        Warning = Color3.fromRGB(255, 165, 0),
+        Error = Color3.fromRGB(255, 0, 0)
+    }
+}
+
+-- Hub Class
+local ScriptHub = {}
+ScriptHub.__index = ScriptHub
+
+function ScriptHub.new()
+    local self = setmetatable({}, ScriptHub)
+    self.gui = nil
+    self.isOpen = false
+    self.scripts = {}
+    self.categories = {}
+    self:createGUI()
+    self:setupEvents()
+    return self
+end
+
+function ScriptHub:createGUI()
+    -- Main ScreenGui
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "ScriptHubGUI"
+    screenGui.ResetOnSpawn = false
+    screenGui.Parent = playerGui
+    self.gui = screenGui
+
+    -- Main Frame
+    local mainFrame = Instance.new("Frame")
+    mainFrame.Name = "MainFrame"
+    mainFrame.Size = UDim2.new(0, 600, 0, 400)
+    mainFrame.Position = UDim2.new(0.5, -300, 0.5, -200)
+    mainFrame.BackgroundColor3 = HubConfig.Theme.Primary
+    mainFrame.BorderSizePixel = 0
+    mainFrame.Active = true
+    mainFrame.Draggable = true
+    mainFrame.Visible = false
+    mainFrame.Parent = screenGui
+
+    -- Corner and Stroke
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 8)
+    corner.Parent = mainFrame
+
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = HubConfig.Theme.Accent
+    stroke.Thickness = 2
+    stroke.Parent = mainFrame
+
+    -- Title Bar
+    local titleBar = Instance.new("Frame")
+    titleBar.Name = "TitleBar"
+    titleBar.Size = UDim2.new(1, 0, 0, 40)
+    titleBar.Position = UDim2.new(0, 0, 0, 0)
+    titleBar.BackgroundColor3 = HubConfig.Theme.Secondary
+    titleBar.BorderSizePixel = 0
+    titleBar.Parent = mainFrame
+
+    local titleCorner = Instance.new("UICorner")
+    titleCorner.CornerRadius = UDim.new(0, 8)
+    titleCorner.Parent = titleBar
+
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Name = "TitleLabel"
+    titleLabel.Size = UDim2.new(1, -100, 1, 0)
+    titleLabel.Position = UDim2.new(0, 10, 0, 0)
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Text = HubConfig.Title .. " " .. HubConfig.Version
+    titleLabel.TextColor3 = HubConfig.Theme.Text
+    titleLabel.TextSize = 18
+    titleLabel.Font = Enum.Font.GothamBold
+    titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    titleLabel.Parent = titleBar
+
+    -- Close Button
+    local closeButton = Instance.new("TextButton")
+    closeButton.Name = "CloseButton"
+    closeButton.Size = UDim2.new(0, 30, 0, 30)
+    closeButton.Position = UDim2.new(1, -35, 0, 5)
+    closeButton.BackgroundColor3 = HubConfig.Theme.Error
+    closeButton.Text = "×"
+    closeButton.TextColor3 = HubConfig.Theme.Text
+    closeButton.TextSize = 20
+    closeButton.Font = Enum.Font.GothamBold
+    closeButton.BorderSizePixel = 0
+    closeButton.Parent = titleBar
+
+    local closeCorner = Instance.new("UICorner")
+    closeCorner.CornerRadius = UDim.new(0, 4)
+    closeCorner.Parent = closeButton
+
+    -- Side Panel (Categories)
+    local sidePanel = Instance.new("Frame")
+    sidePanel.Name = "SidePanel"
+    sidePanel.Size = UDim2.new(0, 150, 1, -50)
+    sidePanel.Position = UDim2.new(0, 10, 0, 50)
+    sidePanel.BackgroundColor3 = HubConfig.Theme.Secondary
+    sidePanel.BorderSizePixel = 0
+    sidePanel.Parent = mainFrame
+
+    local sidePanelCorner = Instance.new("UICorner")
+    sidePanelCorner.CornerRadius = UDim.new(0, 6)
+    sidePanelCorner.Parent = sidePanel
+
+    -- Main Content Area
+    local contentArea = Instance.new("ScrollingFrame")
+    contentArea.Name = "ContentArea"
+    contentArea.Size = UDim2.new(1, -170, 1, -50)
+    contentArea.Position = UDim2.new(0, 170, 0, 50)
+    contentArea.BackgroundColor3 = HubConfig.Theme.Secondary
+    contentArea.BorderSizePixel = 0
+    contentArea.ScrollBarThickness = 6
+    contentArea.ScrollBarImageColor3 = HubConfig.Theme.Accent
+    contentArea.Parent = mainFrame
+
+    local contentCorner = Instance.new("UICorner")
+    contentCorner.CornerRadius = UDim.new(0, 6)
+    contentCorner.Parent = contentArea
+
+    -- Layout for content
+    local contentLayout = Instance.new("UIListLayout")
+    contentLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    contentLayout.Padding = UDim.new(0, 5)
+    contentLayout.Parent = contentArea
+
+    -- Store references
+    self.mainFrame = mainFrame
+    self.sidePanel = sidePanel
+    self.contentArea = contentArea
+    self.closeButton = closeButton
+
+    -- Setup close button
+    closeButton.MouseButton1Click:Connect(function()
+        self:toggle()
+    end)
+end
+
+function ScriptHub:setupEvents()
+    -- Keybind to toggle
+    UserInputService.InputBegan:Connect(function(input, gameProcessed)
+        if gameProcessed then return end
+        if input.KeyCode == HubConfig.KeyBind then
+            self:toggle()
+        end
+    end)
+end
+
+function ScriptHub:toggle()
+    self.isOpen = not self.isOpen
+    if self.isOpen then
+        self:show()
+    else
+        self:hide()
+    end
+end
+
+function ScriptHub:show()
+    self.mainFrame.Visible = true
+    local tween = TweenService:Create(
+        self.mainFrame,
+        TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
+        {Size = UDim2.new(0, 600, 0, 400)}
+    )
+    tween:Play()
+end
+
+function ScriptHub:hide()
+    local tween = TweenService:Create(
+        self.mainFrame,
+        TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.In),
+        {Size = UDim2.new(0, 0, 0, 0)}
+    )
+    tween:Play()
+    tween.Completed:Connect(function()
+        self.mainFrame.Visible = false
+    end)
+end
+
+function ScriptHub:addCategory(name, icon)
+    local categoryButton = Instance.new("TextButton")
+    categoryButton.Name = name .. "Button"
+    categoryButton.Size = UDim2.new(1, -10, 0, 35)
+    categoryButton.Position = UDim2.new(0, 5, 0, #self.categories * 40 + 5)
+    categoryButton.BackgroundColor3 = HubConfig.Theme.Primary
+    categoryButton.Text = (icon or "📁") .. " " .. name
+    categoryButton.TextColor3 = HubConfig.Theme.Text
+    categoryButton.TextSize = 14
+    categoryButton.Font = Enum.Font.Gotham
+    categoryButton.BorderSizePixel = 0
+    categoryButton.Parent = self.sidePanel
+
+    local buttonCorner = Instance.new("UICorner")
+    buttonCorner.CornerRadius = UDim.new(0, 4)
+    buttonCorner.Parent = categoryButton
+
+    -- Store category
+    self.categories[name] = {
+        button = categoryButton,
+        scripts = {}
+    }
+
+    -- Click event
+    categoryButton.MouseButton1Click:Connect(function()
+        self:showCategory(name)
+    end)
+
+    return categoryButton
+end
+
+function ScriptHub:addScript(categoryName, scriptName, description, callback)
+    if not self.categories[categoryName] then
+        self:addCategory(categoryName)
+    end
+
+    local script = {
+        name = scriptName,
+        description = description,
+        callback = callback
+    }
+
+    table.insert(self.categories[categoryName].scripts, script)
+end
+
+function ScriptHub:showCategory(categoryName)
+    -- Clear content area
+    for _, child in pairs(self.contentArea:GetChildren()) do
+        if child:IsA("Frame") then
+            child:Destroy()
+        end
+    end
+
+    local category = self.categories[categoryName]
+    if not category then return end
+
+    -- Create script buttons
+    for i, script in pairs(category.scripts) do
+        local scriptFrame = Instance.new("Frame")
+        scriptFrame.Name = script.name .. "Frame"
+        scriptFrame.Size = UDim2.new(1, -10, 0, 80)
+        scriptFrame.BackgroundColor3 = HubConfig.Theme.Primary
+        scriptFrame.BorderSizePixel = 0
+        scriptFrame.LayoutOrder = i
+        scriptFrame.Parent = self.contentArea
+
+        local frameCorner = Instance.new("UICorner")
+        frameCorner.CornerRadius = UDim.new(0, 6)
+        frameCorner.Parent = scriptFrame
+
+        local nameLabel = Instance.new("TextLabel")
+        nameLabel.Size = UDim2.new(1, -100, 0, 25)
+        nameLabel.Position = UDim2.new(0, 10, 0, 5)
+        nameLabel.BackgroundTransparency = 1
+        nameLabel.Text = script.name
+        nameLabel.TextColor3 = HubConfig.Theme.Text
+        nameLabel.TextSize = 16
+        nameLabel.Font = Enum.Font.GothamBold
+        nameLabel.TextXAlignment = Enum.TextXAlignment.Left
+        nameLabel.Parent = scriptFrame
+
+        local descLabel = Instance.new("TextLabel")
+        descLabel.Size = UDim2.new(1, -100, 0, 45)
+        descLabel.Position = UDim2.new(0, 10, 0, 30)
+        descLabel.BackgroundTransparency = 1
+        descLabel.Text = script.description
+        descLabel.TextColor3 = HubConfig.Theme.Text
+        descLabel.TextSize = 12
+        descLabel.Font = Enum.Font.Gotham
+        descLabel.TextXAlignment = Enum.TextXAlignment.Left
+        descLabel.TextYAlignment = Enum.TextYAlignment.Top
+        descLabel.TextWrapped = true
+        descLabel.Parent = scriptFrame
+
+        local executeButton = Instance.new("TextButton")
+        executeButton.Size = UDim2.new(0, 80, 0, 30)
+        executeButton.Position = UDim2.new(1, -90, 0.5, -15)
+        executeButton.BackgroundColor3 = HubConfig.Theme.Accent
+        executeButton.Text = "Execute"
+        executeButton.TextColor3 = HubConfig.Theme.Text
+        executeButton.TextSize = 14
+        executeButton.Font = Enum.Font.GothamBold
+        executeButton.BorderSizePixel = 0
+        executeButton.Parent = scriptFrame
+
+        local execCorner = Instance.new("UICorner")
+        execCorner.CornerRadius = UDim.new(0, 4)
+        execCorner.Parent = executeButton
+
+        -- Execute button click
+        executeButton.MouseButton1Click:Connect(function()
+            if script.callback then
+                script.callback()
+            end
+        end)
+    end
+
+    -- Update canvas size
+    self.contentArea.CanvasSize = UDim2.new(0, 0, 0, #category.scripts * 85)
+end
+
+-- Example Usage:
+local hub = ScriptHub.new()
+
+-- Add categories and scripts
+hub:addScript("Twisted", "Vehicle Speed Boost", "Thrusts your car foward constantly", function()
+-- Vehicle Speed Modifier with GUI
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Variables
+local speedEnabled = false
+local currentVehicle = nil
+local speedConnection = nil
+
+-- Create GUI
+local function createGUI()
+    -- Main ScreenGui
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "VehicleSpeedGUI"
+    screenGui.ResetOnSpawn = false
+    screenGui.Parent = playerGui
+
+    -- Main Frame
+    local mainFrame = Instance.new("Frame")
+    mainFrame.Name = "MainFrame"
+    mainFrame.Size = UDim2.new(0, 280, 0, 160)
+    mainFrame.Position = UDim2.new(0, 20, 0, 20)
+    mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    mainFrame.BorderSizePixel = 0
+    mainFrame.Active = true
+    mainFrame.Draggable = true
+    mainFrame.Parent = screenGui
+
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 12)
+    corner.Parent = mainFrame
+
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = Color3.fromRGB(70, 70, 70)
+    stroke.Thickness = 2
+    stroke.Parent = mainFrame
+
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Name = "TitleLabel"
+    titleLabel.Size = UDim2.new(1, 0, 0, 30)
+    titleLabel.Position = UDim2.new(0, 0, 0, 0)
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Text = "🚗 Vehicle Speed Mod"
+    titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    titleLabel.TextScaled = true
+    titleLabel.Font = Enum.Font.GothamBold
+    titleLabel.Parent = mainFrame
+
+    local statusLabel = Instance.new("TextLabel")
+    statusLabel.Name = "StatusLabel"
+    statusLabel.Size = UDim2.new(1, -20, 0, 25)
+    statusLabel.Position = UDim2.new(0, 10, 0, 35)
+    statusLabel.BackgroundTransparency = 1
+    statusLabel.Text = "Status: Searching for vehicle..."
+    statusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+    statusLabel.TextScaled = true
+    statusLabel.Font = Enum.Font.Gotham
+    statusLabel.TextXAlignment = Enum.TextXAlignment.Left
+    statusLabel.Parent = mainFrame
+
+    local toggleButton = Instance.new("TextButton")
+    toggleButton.Name = "ToggleButton"
+    toggleButton.Size = UDim2.new(0, 120, 0, 35)
+    toggleButton.Position = UDim2.new(0, 10, 0, 70)
+    toggleButton.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+    toggleButton.Text = "DISABLED"
+    toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    toggleButton.TextScaled = true
+    toggleButton.Font = Enum.Font.GothamBold
+    toggleButton.BorderSizePixel = 0
+    toggleButton.Parent = mainFrame
+
+    local buttonCorner = Instance.new("UICorner")
+    buttonCorner.CornerRadius = UDim.new(0, 8)
+    buttonCorner.Parent = toggleButton
+
+    local speedLabel = Instance.new("TextLabel")
+    speedLabel.Name = "SpeedLabel"
+    speedLabel.Size = UDim2.new(0, 140, 0, 35)
+    speedLabel.Position = UDim2.new(0, 140, 0, 70)
+    speedLabel.BackgroundTransparency = 1
+    speedLabel.Text = "Speed: 0"
+    speedLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    speedLabel.TextScaled = true
+    speedLabel.Font = Enum.Font.Gotham
+    speedLabel.Parent = mainFrame
+
+    -- Configurable Speed TextBox
+    local speedInput = Instance.new("TextBox")
+    speedInput.Name = "SpeedInput"
+    speedInput.Size = UDim2.new(0, 140, 0, 30)
+    speedInput.Position = UDim2.new(0, 140, 0, 35)
+    speedInput.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    speedInput.PlaceholderText = "Max Speed (e.g. 300)"
+    speedInput.Text = "300"
+    speedInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+    speedInput.TextScaled = true
+    speedInput.Font = Enum.Font.Gotham
+    speedInput.ClearTextOnFocus = false
+    speedInput.Parent = mainFrame
+
+    local inputCorner = Instance.new("UICorner")
+    inputCorner.CornerRadius = UDim.new(0, 6)
+    inputCorner.Parent = speedInput
+
+    return screenGui, statusLabel, toggleButton, speedLabel, speedInput
+end
+
+-- Create GUI
+local gui, statusLabel, toggleButton, speedLabel, speedInput = createGUI()
+
+-- Helper: update status label
+local function updateStatus(message, color)
+    statusLabel.Text = "Status: " .. message
+    if color then
+        statusLabel.TextColor3 = color
+    end
+end
+
+-- Helper: update toggle button
+local function updateButton()
+    if speedEnabled then
+        toggleButton.Text = "ENABLED"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(50, 220, 50)
+        local tween = TweenService:Create(toggleButton, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true),
+            {BackgroundColor3 = Color3.fromRGB(70, 255, 70)})
+        tween:Play()
+    else
+        toggleButton.Text = "DISABLED"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+        TweenService:Create(toggleButton, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(220, 50, 50)}):Play()
+    end
+end
+
+-- Find vehicle logic (unchanged)
+local function findVehicle()
+    local vehicle = nil
+    local playerRelated = Workspace:FindFirstChild("player_related")
+    if playerRelated then
+        local cars = playerRelated:FindFirstChild("cars")
+        if cars then
+            vehicle = cars:FindFirstChild(tostring(player.UserId))
+            if vehicle then
+                updateStatus("Found your car: " .. vehicle.Name, Color3.fromRGB(100, 255, 100))
+                return vehicle
+            end
+        end
+    end
+    if not vehicle and player:FindFirstChild("Vehicle") then
+        vehicle = player.Vehicle
+        updateStatus("Found via player.Vehicle", Color3.fromRGB(100, 255, 100))
+    end
+    if not vehicle and player.Character then
+        for _, child in pairs(player.Character:GetChildren()) do
+            if child.Name:lower():find("vehicle") or child.Name:lower():find("car") then
+                vehicle = child
+                updateStatus("Found in character: " .. child.Name, Color3.fromRGB(100, 255, 100))
+                break
+            end
+        end
+    end
+    if not vehicle and player.Character and player.Character:FindFirstChild("Humanoid") then
+        local seat = player.Character.Humanoid.SeatPart
+        if seat then
+            vehicle = seat.Parent
+            updateStatus("Found via seat: " .. vehicle.Name, Color3.fromRGB(100, 255, 100))
+        end
+    end
+    if not vehicle then
+        for _, obj in pairs(Workspace:GetChildren()) do
+            if (obj.Name:find(player.Name) or obj.Name == tostring(player.UserId)) and 
+               (obj.Name:lower():find("vehicle") or obj.Name:lower():find("car") or obj:FindFirstChild("VehicleSeat")) then
+                vehicle = obj
+                updateStatus("Found in workspace: " .. obj.Name, Color3.fromRGB(100, 255, 100))
+                break
+            end
+        end
+    end
+    return vehicle
+end
+
+-- Speed mod logic
+local function applySpeedMod(vehicle)
+    if not vehicle then return false end
+    local success = false
+
+    for _, obj in pairs(vehicle:GetDescendants()) do
+        if obj:IsA("NumberValue") or obj:IsA("IntValue") then
+            local name = string.lower(obj.Name)
+            if name:find("speed") or name:find("maxspeed") or name:find("topspeed") or 
+               name:find("velocity") or name:find("acceleration") or name:find("power") then
+                obj.Value = 1000
+                success = true
+            elseif name:find("force") or name:find("torque") then
+                obj.Value = 5000
+                success = true
+            end
+        end
+    end
+
+    local primaryPart = vehicle.PrimaryPart or vehicle:FindFirstChild("Main") or vehicle:FindFirstChild("Body") or vehicle:FindFirstChild("Chassis")
+    if not primaryPart then
+        for _, part in pairs(vehicle:GetDescendants()) do
+            if part:IsA("BasePart") then
+                local size = part.Size.X * part.Size.Y * part.Size.Z
+                if not primaryPart or size > (primaryPart.Size.X * primaryPart.Size.Y * primaryPart.Size.Z) then
+                    primaryPart = part
+                end
+            end
+        end
+    end
+
+    if primaryPart then
+        for _, obj in pairs(primaryPart:GetChildren()) do
+            if obj:IsA("BodyVelocity") or obj:IsA("BodyPosition") or obj:IsA("BodyAngularVelocity") then
+                obj:Destroy()
+            end
+        end
+
+        if speedConnection then
+            speedConnection:Disconnect()
+        end
+
+        speedConnection = RunService.Heartbeat:Connect(function()
+            if speedEnabled and vehicle and vehicle.Parent and primaryPart and primaryPart.Parent then
+                local velocity = primaryPart.AssemblyLinearVelocity
+                local currentSpeed = math.floor(velocity.Magnitude)
+                speedLabel.Text = "Speed: " .. currentSpeed
+
+                local maxSpeed = tonumber(speedInput.Text) or 300
+                if velocity.Magnitude > 1 then
+                    local direction = velocity.Unit
+                    local newSpeed = math.min(velocity.Magnitude * 1.05, maxSpeed)
+                    primaryPart.AssemblyLinearVelocity = direction * newSpeed
+                end
+            else
+                speedLabel.Text = "Speed: 0"
+            end
+        end)
+
+        success = true
+    end
+
+    return success
+end
+
+-- Toggle
+local function toggleSpeedMod()
+    if not currentVehicle then
+        updateStatus("No vehicle found!", Color3.fromRGB(255, 100, 100))
+        return
+    end
+    speedEnabled = not speedEnabled
+    updateButton()
+
+    if speedEnabled then
+        local success = applySpeedMod(currentVehicle)
+        if success then
+            updateStatus("Speed mod ENABLED!", Color3.fromRGB(100, 255, 100))
+        else
+            updateStatus("Failed to enable speed mod", Color3.fromRGB(255, 100, 100))
+            speedEnabled = false
+            updateButton()
+        end
+    else
+        updateStatus("Speed mod DISABLED", Color3.fromRGB(255, 200, 100))
+        if speedConnection then
+            speedConnection:Disconnect()
+            speedConnection = nil
+        end
+    end
+end
+
+toggleButton.MouseButton1Click:Connect(toggleSpeedMod)
+
+-- Main vehicle detection loop
+spawn(function()
+    while true do
+        local vehicle = findVehicle()
+        if vehicle ~= currentVehicle then
+            currentVehicle = vehicle
+            if vehicle then
+                updateStatus("Vehicle found: " .. vehicle.Name, Color3.fromRGB(100, 255, 100))
+                if speedEnabled then
+                    applySpeedMod(vehicle)
+                end
+            else
+                updateStatus("Searching for vehicle...", Color3.fromRGB(200, 200, 200))
+                speedEnabled = false
+                updateButton()
+            end
+        end
+        wait(2)
+    end
+end)
+
+updateStatus("Initializing...", Color3.fromRGB(200, 200, 200))
+updateButton()
+print("Vehicle Speed Mod GUI loaded!")
+
+    print("Vehicle Boost GUI Opened")
+end)
+
+hub:addScript("Twisted", "Tornado ESP", "Reveals Tornado Windspeed", function()
+
+-- === Tornado Winds HUD (movable, closable, dynamic update) ===
+local player = game.Players.LocalPlayer
+local runService = game:GetService("RunService")
+local userInputService = game:GetService("UserInputService")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "TornadoHUD"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = player:WaitForChild("PlayerGui")
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 320, 0, 70)
+mainFrame.Position = UDim2.new(0.5, -160, 0.05, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+mainFrame.BackgroundTransparency = 0.25
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = screenGui
+
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -35, 0, 5)
+closeButton.BackgroundColor3 = Color3.fromRGB(180, 0, 0)
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.Font = Enum.Font.SourceSansBold
+closeButton.TextScaled = true
+closeButton.Text = "X"
+closeButton.Parent = mainFrame
+closeButton.AutoButtonColor = true
+
+closeButton.MouseButton1Click:Connect(function()
+	screenGui.Enabled = false
+end)
+
+local windLabel = Instance.new("TextLabel")
+windLabel.Size = UDim2.new(1, -40, 1, -10)
+windLabel.Position = UDim2.new(0, 10, 0, 10)
+windLabel.BackgroundTransparency = 1
+windLabel.TextColor3 = Color3.new(1, 1, 1)
+windLabel.TextStrokeTransparency = 0.5
+windLabel.Font = Enum.Font.SourceSansBold
+windLabel.TextScaled = true
+windLabel.Text = "🌪️ Scanning for Tornado..."
+windLabel.TextWrapped = true
+windLabel.Parent = mainFrame
+
+-- Drag logic
+local dragging = false
+local dragInput, dragStart, startPos
+
+local function updatePosition(input)
+	local delta = input.Position - dragStart
+	mainFrame.Position = UDim2.new(
+		startPos.X.Scale,
+		startPos.X.Offset + delta.X,
+		startPos.Y.Scale,
+		startPos.Y.Offset + delta.Y
+	)
+end
+
+mainFrame.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = true
+		dragStart = input.Position
+		startPos = mainFrame.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+mainFrame.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		dragInput = input
+	end
+end)
+
+userInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		updatePosition(input)
+	end
+end)
+
+local function getEF(wind)
+	if wind >= 201 then
+		return "EF5", Color3.fromRGB(180, 0, 0)
+	elseif wind >= 166 then
+		return "EF4", Color3.fromRGB(220, 50, 50)
+	elseif wind >= 136 then
+		return "EF3", Color3.fromRGB(255, 85, 0)
+	elseif wind >= 111 then
+		return "EF2", Color3.fromRGB(255, 170, 0)
+	elseif wind >= 86 then
+		return "EF1", Color3.fromRGB(255, 215, 0)
+	elseif wind >= 65 then
+		return "EF0", Color3.fromRGB(130, 200, 40)
+	else
+		return "Below EF Scale", Color3.fromRGB(60, 60, 60)
+	end
+end
+
+local currentWindsValue = nil
+local currentTornadoName = nil
+
+local function updateWindLabel()
+	if currentWindsValue and currentWindsValue.Parent and currentWindsValue:IsA("NumberValue") then
+		local speed = math.floor(currentWindsValue.Value)
+		local efRating, bgColor = getEF(speed)
+		local tornadoNameText = currentTornadoName or "Unknown Tornado"
+		windLabel.Text = string.format("🌪️ %s  |  EF Rating: %s  |  Wind Speed: %d mph", tornadoNameText, efRating, speed)
+		mainFrame.BackgroundColor3 = bgColor
+	else
+		windLabel.Text = "🌪️ Tornado Not Detected"
+		mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	end
+end
+
+local function findTornadoWindValue()
+	local stormsFolder = workspace:FindFirstChild("storm_related") and workspace.storm_related:FindFirstChild("storms")
+	if not stormsFolder then return nil, nil end
+
+	for _, storm in pairs(stormsFolder:GetChildren()) do
+		local configs = storm:FindFirstChild("configs")
+		local tornado = configs and configs:FindFirstChild("tornado")
+		local winds = tornado and tornado:FindFirstChild("winds")
+		if winds and winds:IsA("NumberValue") then
+			return winds, storm.Name
+		end
+	end
+	return nil, nil
+end
+
+local stormsFolder = workspace:WaitForChild("storm_related"):WaitForChild("storms")
+
+local function updateCurrentWinds()
+	currentWindsValue, currentTornadoName = findTornadoWindValue()
+	updateWindLabel()
+end
+
+stormsFolder.ChildAdded:Connect(function()
+	updateCurrentWinds()
+end)
+
+stormsFolder.ChildRemoved:Connect(function()
+	updateCurrentWinds()
+end)
+
+local function bindWindChanged(windsValue)
+	if not windsValue then return end
+	windsValue:GetPropertyChangedSignal("Value"):Connect(function()
+		updateWindLabel()
+	end)
+end
+
+updateCurrentWinds()
+bindWindChanged(currentWindsValue)
+
+runService.RenderStepped:Connect(function()
+	if currentWindsValue and (not currentWindsValue.Parent or not currentWindsValue:IsDescendantOf(workspace)) then
+		currentWindsValue = nil
+		currentTornadoName = nil
+		updateCurrentWinds()
+		if currentWindsValue then
+			bindWindChanged(currentWindsValue)
+		end
+	elseif currentWindsValue == nil then
+		updateCurrentWinds()
+		if currentWindsValue then
+			bindWindChanged(currentWindsValue)
+		end
+	end
+end)
+
+    print("Tornado Revealed")
+end)
+
+hub:addScript("Twisted", "Tornado Teleport", "Teleports to Tornado", function()
+local player = game.Players.LocalPlayer
+local PlayerGui = player:WaitForChild("PlayerGui")
+
+-- Create GUI
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "TornadoListGui"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = PlayerGui
+
+-- Scrollable frame
+local frame = Instance.new("ScrollingFrame")
+frame.Name = "TornadoListFrame"
+frame.Size = UDim2.new(0, 200, 0, 300)
+frame.Position = UDim2.new(0, 20, 0.2, 0)
+frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+frame.BorderSizePixel = 0
+frame.ScrollingDirection = Enum.ScrollingDirection.Y
+frame.Active = true
+frame.Draggable = true
+frame.Parent = screenGui
+
+-- Function to update the tornado list
+local function updateTornadoList()
+	-- Clear existing buttons
+	for _, child in ipairs(frame:GetChildren()) do
+		if child:IsA("TextButton") or child:IsA("TextLabel") then
+			child:Destroy()
+		end
+	end
+
+	local stormsFolder = workspace:FindFirstChild("storm_related") and workspace.storm_related:FindFirstChild("storms")
+	if not stormsFolder then
+		warn("⚠️ Could not find workspace.storm_related.storms")
+		return
+	end
+
+	local y = 0
+	local foundTornado = false
+
+	for _, storm in ipairs(stormsFolder:GetChildren()) do
+		local rotation = storm:FindFirstChild("rotation")
+		local tornado = rotation and rotation:FindFirstChild("tornado")
+
+		if tornado and tornado:IsA("BasePart") then
+			foundTornado = true
+			print("✅ Found tornado in storm:", storm.Name)
+
+			local btn = Instance.new("TextButton")
+			btn.Size = UDim2.new(1, -10, 0, 40)
+			btn.Position = UDim2.new(0, 5, 0, y)
+			btn.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+			btn.TextColor3 = Color3.new(1, 1, 1)
+			btn.Font = Enum.Font.SourceSansBold
+			btn.TextSize = 16
+			btn.Text = "TP to " .. storm.Name
+			btn.Parent = frame
+
+			btn.MouseButton1Click:Connect(function()
+				local char = player.Character or player.CharacterAdded:Wait()
+				local hrp = char:WaitForChild("HumanoidRootPart")
+				hrp.CFrame = CFrame.new(tornado.Position + Vector3.new(0, 100, 0))
+			end)
+
+			y += 45
+		else
+			print("⚠️ No valid tornado in:", storm.Name)
+		end
+	end
+
+	frame.CanvasSize = UDim2.new(0, 0, 0, y)
+
+	if not foundTornado then
+		local msg = Instance.new("TextLabel")
+		msg.Size = UDim2.new(1, -10, 0, 40)
+		msg.Position = UDim2.new(0, 5, 0, 5)
+		msg.Text = "No tornadoes found"
+		msg.TextColor3 = Color3.new(1, 1, 1)
+		msg.BackgroundTransparency = 1
+		msg.TextScaled = true
+		msg.Font = Enum.Font.SourceSansBold
+		msg.Parent = frame
+	end
+end
+
+-- Set up event listeners for storm changes
+local function setupListeners()
+	local stormRelated = workspace:WaitForChild("storm_related", 10)
+	if not stormRelated then
+		warn("⚠️ storm_related not found")
+		return
+	end
+
+	local stormsFolder = stormRelated:WaitForChild("storms", 10)
+	if not stormsFolder then
+		warn("⚠️ storms folder not found")
+		return
+	end
+
+	-- Initial update
+	updateTornadoList()
+
+	-- React to storms being added or removed
+	stormsFolder.ChildAdded:Connect(updateTornadoList)
+	stormsFolder.ChildRemoved:Connect(updateTornadoList)
+end
+
+-- Start listening
+setupListeners()
+
+    print("Tornado Teleport GUI Opened")
+end)
+
+
+-- Show first category by default
+if next(hub.categories) then
+    local firstCategory = next(hub.categories)
+    hub:showCategory(firstCategory)
+end
+
+-- ===== DRAG SYSTEM (PC + MOBILE) =====
+local function makeDraggable(guiObject)
+	local UserInputService = game:GetService("UserInputService")
+	local dragging = false
+	local dragStart, startPos
+
+	guiObject.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = guiObject.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	guiObject.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragging then
+				local delta = input.Position - dragStart
+				guiObject.Position = UDim2.new(
+					startPos.X.Scale,
+					startPos.X.Offset + delta.X,
+					startPos.Y.Scale,
+					startPos.Y.Offset + delta.Y
+				)
+			end
+		end
+	end)
+end
+
+-- ===== MOBILE TOGGLE BUTTON =====
+local function createMobileToggle(hub)
+	local gui = Instance.new("ScreenGui")
+	gui.Name = "HubMobileToggle"
+	gui.ResetOnSpawn = false
+	gui.Parent = playerGui
+
+	local btn = Instance.new("TextButton")
+	btn.Size = UDim2.new(0, 60, 0, 60)
+	btn.Position = UDim2.new(0, 20, 0.5, -30)
+	btn.BackgroundColor3 = HubConfig.Theme.Accent
+	btn.Text = "≡"
+	btn.TextColor3 = HubConfig.Theme.Text
+	btn.TextScaled = true
+	btn.Font = Enum.Font.GothamBold
+	btn.BorderSizePixel = 0
+	btn.Parent = gui
+
+	local corner = Instance.new("UICorner")
+	corner.CornerRadius = UDim.new(1, 0)
+	corner.Parent = btn
+
+	btn.MouseButton1Click:Connect(function()
+		hub:toggle()
+	end)
+
+	makeDraggable(btn)
+end
+
+-- ===== APPLY =====
+makeDraggable(hub.mainFrame)
+createMobileToggle(hub)
+
+
+print("Script Hub loaded!.")
